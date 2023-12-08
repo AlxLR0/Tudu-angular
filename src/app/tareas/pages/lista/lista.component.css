@@ -1,0 +1,47 @@
+
+.container{
+    margin-top: 5%;
+    
+}
+
+.containerDos{
+    margin-right: 9%;
+    margin-left: 8%;
+    
+}
+.foot{
+    background: rgb(65,1,142);
+background: linear-gradient(90deg, rgba(65,1,142,1) 0%, rgba(43,3,91,1) 51%, rgba(13,0,28,1) 100%);
+    color: white;  
+     
+}
+
+
+.textobout{
+    margin-top: 5%;
+    text-align: justify;
+    
+}
+/* Estilos para los iconos de redes sociales en línea */
+.icons a {
+    display: inline-block;
+    margin: 0 10px; /* Ajusta el margen entre los iconos según sea necesario */
+    font-size: 24px;
+    color: white;
+    text-decoration: none; /* Elimina la subrayado predeterminado en los enlaces */
+    transition: .5s;
+}
+
+.icons a:hover {
+    color: #3DD2CC;
+    transform: translateY(-5px);
+}
+
+/* Para eliminar las líneas azules debajo de los iconos al hacer clic */
+.icons a:focus, .icons a:active {
+    outline: none;
+    border: none;
+}
+
+
+

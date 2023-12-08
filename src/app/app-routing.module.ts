@@ -20,6 +20,10 @@ const routes: Routes = [
     path: "tareas",
     //component: LoginComponent
     loadChildren: () => import('./tareas/tareas.module').then( m => m.TareasModule )
+  },
+  {
+    path: "usuario",
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfileModule )
   }
   
   
