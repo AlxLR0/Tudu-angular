@@ -1,0 +1,52 @@
+
+<div class="card p-1 m-1" *ngIf="tarea; else noTarea">
+    <!--Encabezado-->
+  <div
+    class="card-header text-center text-white"
+    [ngClass]="{
+      'bg-warning': tarea.status == tareaStatus.pendiente,
+      'bg-success': tarea.status == tareaStatus.compleatdo,
+      'bg-danger': tarea.status == tareaStatus.retrasado
+    }">
+    <h2>{{ tarea.titulo }}</h2>
+  </div>
+
+  <!--Cuerpo-->
+  <div class="card-body">
+    {{ tarea.descripcion }}
+  </div>
+
+  <!--pie-->
+  <div class="card-footer">
+    <div class="text-center">
+      <p
+        [ngClass]="{
+          'text-warning': tarea.status == tareaStatus.pendiente,
+          'text-success': tarea.status == tareaStatus.compleatdo,
+          'text-danger': tarea.status == tareaStatus.retrasado
+        }">
+        &squarf;{{ tarea.status }}
+      </p>
+    </div>
+<!--Botones-->
+    <div class="text-center"
+    *ngIf="index>=0 && tarea.status != 'Completado'">
+      <button
+        class="btn btn-small btn-outline-danger m-1"
+        (click)="changeStatus(tareaStatus.retrasado)"
+        *ngIf="tarea.status == 'Pendiente'"
+        >👎
+      </button>
+      <button
+        class="btn btn-small btn-outline-success"
+        (click)="changeStatus(tareaStatus.compleatdo)"
+      >🤙
+      </button>
+    </div>
+
+  </div>
+</div>
+<ng-template #noTarea>
+  <h3 class="bg-warning w-100">Nada por aqui aun... 👀</h3>
+  <h4>ve a <kbd>Nueva Tarea</kbd> para registrar tus actividades</h4>
+</ng-template>

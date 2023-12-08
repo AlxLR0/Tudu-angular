@@ -51,8 +51,13 @@
           <!-- <div class="col-md-6 offset-md-3 mt-5"> -->
               <h2 class="text-center mb-4">Mi lista</h2>
               <hr>
-              <h3>Nada por aqui aun... 👀</h3>
-              <h4>ve a <kbd>Nueva Tarea</kbd> para registrar tus actividades</h4>
+              
+              <tareas-module-tarea-card class="col-12 col-sm-6 col-md-7 col-lg-4"
+                *ngFor="let tarea of tareas;let i=index"
+                [tarea]="tarea"
+                [tareaIndex]="i"
+                (onStatusChange)="catchOnStatusChange()"
+              />
               <!-- <form>
                   <div class="mb-3">
                       <label for="taskName" class="form-label">Nombre de la tarea</label>
