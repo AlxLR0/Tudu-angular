@@ -6,6 +6,7 @@ import { ListaComponent } from './pages/lista/lista.component';
 import { AppComponent } from './pages/app/app.component';
 import { RegistroTareasComponent } from './pages/registro-tareas/registro-tareas.component';
 import { TareaCardComponent } from './components/tarea-card/tarea-card.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { TareaCardComponent } from './components/tarea-card/tarea-card.component
   ],
   imports: [
     CommonModule,
-    TareasRoutingModule
+    TareasRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class TareasModule { }
